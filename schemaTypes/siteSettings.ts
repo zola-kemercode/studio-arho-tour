@@ -85,6 +85,12 @@ export default {
         },
       ],
     },
+    {      name: 'groupTour',      title: 'Group Tour Section',      type: 'object',      fields: [        {          name: 'heading',          title: 'Section Heading',          type: 'string',          validation: (Rule: any) => Rule.required(),        },        {          name: 'description',          title: 'Section Description',          type: 'text',          validation: (Rule: any) => Rule.required(),        },        {          name: 'image',          title: 'Section Image',          type: 'image',          options: {            hotspot: true,          },          validation: (Rule: any) => Rule.required(),        },        {          name: 'accommodationOptions',          title: 'Accommodation Options',          type: 'array',          of: [{type: 'reference', to: [{type: 'accommodationOption'}]}],          validation: (Rule: any) => Rule.required(),        },        {          name: 'transportationOptions',          title: 'Transportation Options',          type: 'array',          of: [{type: 'reference', to: [{type: 'transportationOption'}]}],          validation: (Rule: any) => Rule.required(),        }      ]    },    {      name: 'planPageHero',      title: 'Group Tour Page Hero Section',      type: 'object',      fields: [        {name: 'heading', title: 'Heading', type: 'string'},        {name: 'subheading', title: 'Subheading', type: 'string'},        {          name: 'backgroundImage',          title: 'Background Image',          type: 'image',          options: {            hotspot: true,
+          },
+        },
+        {name: 'description', title: 'Description', type: 'text'},
+      ],
+    },
     {
       name: 'aboutSection',
       title: 'About Section',
@@ -111,12 +117,12 @@ export default {
               fields: [
                 {name: 'title', title: 'Title', type: 'string'},
                 {name: 'description', title: 'Description', type: 'text'},
+                {name: 'icon', title: 'Icon', type: 'string', options: {list: ['Users', 'Award', 'Check', 'ThumbsUp']}, description: 'Select an icon for this value'},
               ],
             },
           ],
         },
-        {
-          name: 'teamMembers',
+        {name: 'teamMembers',
           title: 'Team Members',
           type: 'array',
           of: [
@@ -137,6 +143,30 @@ export default {
               ],
             },
           ],
+        },
+        {
+          name: 'whyChooseUs',
+          title: 'Why Choose Us Section',
+          type: 'object',
+          fields: [
+            {name: 'heading', title: 'Heading', type: 'string'},
+            {name: 'description', title: 'Description', type: 'array', of: [{type: 'block'}]},
+            {
+              name: 'features',
+              title: 'Features',
+              type: 'array',
+              of: [
+                {
+                  type: 'object',
+                  fields: [
+                    {name: 'title', title: 'Title', type: 'string'},
+                    {name: 'description', title: 'Description', type: 'text'}
+                  ]
+                }
+              ],
+              validation: (Rule: any) => Rule.length(4).error('Exactly 4 features are required')
+            }
+          ]
         },
       ],
     },

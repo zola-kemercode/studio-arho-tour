@@ -5,6 +5,8 @@ import faq from './faq'
 import category from './category'
 import siteSettings from './siteSettings'
 import blogPost from './blogPost'
+import accommodationOption from './accommodationOption'
+import transportationOption from './transportationOption'
 
 export const schemaTypes = [
   destination,
@@ -14,4 +16,6 @@ export const schemaTypes = [
   category,
   siteSettings,
   blogPost,
+  accommodationOption,
+  transportationOption,
 ]
