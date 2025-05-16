@@ -19,6 +19,7 @@ export default {
       name: 'category',
       title: 'Category',
       type: 'string',
+      validation: (Rule: any) => Rule.required(),
       options: {
         list: [
           {title: 'Before You Travel', value: 'Before You Travel'},

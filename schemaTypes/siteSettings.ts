@@ -85,6 +85,41 @@ export default {
         },
       ],
     },
+
+    {
+      name: 'faqHeroSection',
+      title: 'FAQ Page Hero Section',
+      type: 'object',
+      fields: [
+        {name: 'heading', title: 'Heading', type: 'string'},
+        {name: 'subheading', title: 'Subheading', type: 'string'},
+        {
+          name: 'backgroundImage',
+          title: 'Background Image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+    },
+    {
+      name: 'blogHeroSection',
+      title: 'Blog Page Hero Section',
+      type: 'object',
+      fields: [
+        {name: 'heading', title: 'Heading', type: 'string'},
+        {name: 'subheading', title: 'Subheading', type: 'string'},
+        {
+          name: 'backgroundImage',
+          title: 'Background Image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+    },
     {
       name: 'aboutSection',
       title: 'About Section',
@@ -101,20 +136,20 @@ export default {
             hotspot: true,
           },
         },
-        {
-          name: 'values',
-          title: 'Our Values',
-          type: 'array',
-          of: [
-            {
-              type: 'object',
-              fields: [
-                {name: 'title', title: 'Title', type: 'string'},
-                {name: 'description', title: 'Description', type: 'text'},
-                {name: 'icon', title: 'Icon', type: 'string', options: {list: ['Users', 'Award', 'Check', 'ThumbsUp']}, description: 'Select an icon for this value'},
-              ],
-            },
-          ],
+      {
+        name: 'values',
+        title: 'Our Values',
+        type: 'array',
+        of: [
+          {
+            type: 'object',
+            fields: [
+              {name: 'title', title: 'Title', type: 'string'},
+              {name: 'description', title: 'Description', type: 'text'},
+              {name: 'icon', title: 'Icon', type: 'string', options: {list: ['Users', 'Award', 'Check', 'ThumbsUp']}, description: 'Select an icon for this value'},
+            ],
+          },
+        ],
         },
         {name: 'teamMembers',
           title: 'Team Members',
@@ -163,16 +198,16 @@ export default {
           ]
         },
       ],
-    },
-  ],
-  preview: {
-    select: {
-      title: 'title',
-    },
-    prepare({title}: any) {
-      return {
-        title: `Site Settings: ${title}`,
-      }
-    },
-  },
-}
+        },
+      ],
+      preview: {
+        select: {
+          title: 'title',
+        },
+        prepare({title}: any) {
+          return {
+            title: `Site Settings: ${title}`,
+          }
+        },
+      },
+    }

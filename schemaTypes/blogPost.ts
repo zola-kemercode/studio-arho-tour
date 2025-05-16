@@ -4,6 +4,34 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'hero',
+      title: 'Hero Section',
+      type: 'object',
+      fields: [
+        {
+          name: 'backgroundImage',
+          title: 'Background Image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          validation: (Rule: any) => Rule.required(),
+        },
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+          validation: (Rule: any) => Rule.required(),
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'text',
+          validation: (Rule: any) => Rule.required(),
+        },
+      ],
+    },
+    {
       name: 'title',
       title: 'Title',
       type: 'string',
@@ -45,6 +73,34 @@ export default {
       title: 'Author',
       type: 'object',
       fields: [
+    {
+      name: 'hero',
+      title: 'Hero Section',
+      type: 'object',
+      fields: [
+        {
+          name: 'backgroundImage',
+          title: 'Background Image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          validation: (Rule: any) => Rule.required(),
+        },
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+          validation: (Rule: any) => Rule.required(),
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'text',
+          validation: (Rule: any) => Rule.required(),
+        },
+      ],
+    },
         {
           name: 'name',
           title: 'Name',
@@ -86,6 +142,34 @@ export default {
             hotspot: true,
           },
           fields: [
+    {
+      name: 'hero',
+      title: 'Hero Section',
+      type: 'object',
+      fields: [
+        {
+          name: 'backgroundImage',
+          title: 'Background Image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          validation: (Rule: any) => Rule.required(),
+        },
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+          validation: (Rule: any) => Rule.required(),
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'text',
+          validation: (Rule: any) => Rule.required(),
+        },
+      ],
+    },
             {
               name: 'caption',
               type: 'string',
