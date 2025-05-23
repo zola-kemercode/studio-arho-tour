@@ -8,6 +8,7 @@ import blogPost from './blogPost'
 import accommodationOption from './accommodationOption'
 import transportationOption from './transportationOption'
 import contact from './contacts'
+import booking from './booking'
 
 export const schemaTypes = [
   destination,
@@ -20,4 +21,5 @@ export const schemaTypes = [
   accommodationOption,
   transportationOption,
   contact,
+  booking,
 ]
