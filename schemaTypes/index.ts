@@ -1,29 +1,33 @@
-import destination from './destination'
-import tour from './tour'
-import testimonial from './testimonial'
-import faq from './faq'
-import category from './category'
-import siteSettings from './siteSettings'
-import blogPost from './blogPost'
 import accommodationOption from './accommodationOption'
-import transportationOption from './transportationOption'
-import contact from './contacts'
+import blogPost from './blogPost'
 import booking from './booking'
-import termsAndConditions from './termsAndConditions'
+import category from './category'
+import contacts from './contacts'
+import contactSubmission from './contactSubmission'
+import destination from './destination'
+import faq from './faq'
+import newsletter from './newsletter'
 import privacyPolicy from './privacyPolicy'
+import siteSettings from './siteSettings'
+import termsAndConditions from './termsAndConditions'
+import testimonial from './testimonial'
+import tour from './tour'
+import transportationOption from './transportationOption'
 
 export const schemaTypes = [
-  destination,
-  tour,
-  testimonial,
-  faq,
-  category,
-  siteSettings,
-  blogPost,
   accommodationOption,
-  transportationOption,
-  contact,
+  blogPost,
   booking,
-  termsAndConditions,
+  category,
+  contacts,
+  contactSubmission,
+  destination,
+  faq,
+  newsletter,
   privacyPolicy,
+  siteSettings,
+  termsAndConditions,
+  testimonial,
+  tour,
+  transportationOption,
 ]
